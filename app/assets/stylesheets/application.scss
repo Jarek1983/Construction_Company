@@ -18,6 +18,7 @@
 @import "navigation";
 @import "footer";
 @import "services";
+@import "forms";
 
 
 html {height: 100%;}
@@ -28,8 +29,8 @@ body {
     position: relative; 
     padding-bottom: [footer-height];
 	background-color: #ebedee;	
+	touch-action: manipulation;
 }
-
 
 .main-header {
   line-height: 1;
