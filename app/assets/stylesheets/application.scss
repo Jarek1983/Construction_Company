@@ -15,6 +15,11 @@
  */
 
 @import "bootstrap";
+@import "navigation";
+
+body {
+	background-color: #ebedee;
+}
 
 
 .main-header {
@@ -24,9 +29,37 @@
 
 .main-header-logo {
   font-family: "Playfair Display", Georgia, "Times New Roman", serif;
-  font-size: 2.25rem;
+  font-size: 4vh;
 }
 
 .main-header-logo:hover {
   text-decoration: none;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+}
+
+@media only screen and (max-width: 1199px),
+(min-device-width: 992px) and (max-device-width: 1199px) {
+	.main-header-logo {
+		font-size: 5vh;
+	}
+}
+
+@media only screen and (max-width: 991px),
+(min-device-width: 768px) and (max-device-width: 991px) {
+	.main-header-logo {
+		font-size: 6vh;
+	}
+}
+
+@media only screen and (max-width: 767px),
+(min-device-width: 100px) and (max-device-width: 767px) {
+	.main-header-logo {
+		font-size: 8vh;
+	}
+}
+
+
+
