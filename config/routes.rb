@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'services/index'
   get 'about/index'
   resources :posts
   root 'welcome#index'
