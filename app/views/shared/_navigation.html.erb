@@ -5,7 +5,7 @@
 
       <div class="collapse navbar-collapse" id="navbarsExample01">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
+          <li class="nav-item active pl-5">
             <%= link_to 'Aktualności', root_path, class: 'nav-link pl-5' %>
           </li>
           <li class="nav-item">
@@ -29,14 +29,21 @@
           <li class="nav-item">
             <%= link_to 'Kontakt', root_path, class: 'nav-link pl-5' %>
           </li>
-          <li class="nav-item">
-            <%= link_to 'Partnerzy', root_path, class: 'nav-link pl-5' %>
-          </li>
-          <li class="nav-item">
-            <%= link_to 'Zaloguj się', root_path, class: 'nav-link pl-5' %>
-          </li>
 
 
+          <% if current_user && current_user.admin? %>
+
+          <li class="nav-item">
+            <%= link_to 'Wyloguj', destroy_user_session_path, method: :delete, class: 'nav-link pl-5' %>
+          </li>
+            
+          <% else %>
+
+          <li class="nav-item">
+            <%= link_to 'Zaloguj', new_user_session_path, class: 'nav-link pl-5'%>
+          </li>
+
+          <% end %>
 
     </div>
 </nav> 
