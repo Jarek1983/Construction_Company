@@ -1,0 +1,28 @@
+<section class="container pt-5 pb-5">
+  <div class="row">
+      <div class="col-12">
+
+  <p class="text-center">
+<!--     <strong>Tytuł:</strong> -->
+    <%= @post.title %>
+  </p>
+
+  <p class="text-justify">
+<!--     <strong>Tekst:</strong> -->
+    <%= @post.description %>
+  </p>
+
+  </div>
+      </div>
+
+  <div class="pb-5">
+      <%= link_to 'Powrót', posts_path, class: 'btn btn-lg btn-success' %>
+
+    <% if current_user && current_user&.admin? %>
+
+      <%= link_to 'Edytuj', edit_post_path(@post), class: 'btn btn-lg btn-primary' %> 
+
+    <% end %>
+  </div>
+
+</section>

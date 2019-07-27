@@ -1,2 +1,51 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+<div class="jumbotron">
+  <h1 class="display-4">Hello, world!</h1>
+    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+
+    <hr class="my-4">
+
+    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+</div>
+
+
+<section class="container pb-5">
+  <div class="row">
+      <div class="col-12">
+
+            <% if current_user && current_user&.admin? %>
+
+            <%= link_to 'Dodaj', new_post_path, class: "btn btn-primary btn-lg" %> <hr/>
+
+            <% end %>
+
+          <div class="row pb-5">
+              <% @posts.each do |post| %>
+                <div class="col-12">
+                  <div class="card"> 
+                          <div class="card-block text-center">
+                               <h4 class="card-title text-center text-capitalize font-weight-bold">
+                                  <%=post.title %>
+                               </h4>
+                               <h4 class="card-title text-justify text-capitalize mx-2">
+                                  <%=post.description %>
+                               </h4>
+
+                                <% if current_user && current_user&.admin? %>
+
+                                  <div class="p-2">
+                                    <%= link_to 'Pokaż', post_path(post), class: "btn btn-lg btn-primary" %>
+                                    <%= link_to 'Edytuj', edit_post_path(post), class: "btn btn-lg btn-info" %>
+                                    <%= link_to 'Usuń', post_path(post), method: :delete, data: {confirm: 'Czy na pewno usunąć?'}, class: "btn btn-lg btn-danger" %>
+                                  </div>
+                                <% end %>
+
+                          </div>
+                  </div>
+                </div>
+              <% end %>
+          </div>
+
+      </div>
+  </div>
+</section>
+
