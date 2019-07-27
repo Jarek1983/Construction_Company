@@ -4,6 +4,7 @@
 
 	    <%= f.input :title, label: 'Podaj tytuł:' %>
 	    <%= f.input :description, label: 'Podaj treść:'%> 
+	    <%= f.hidden_field :user_id, value: 1 %>
 	    <%= link_to 'Powrót', posts_path, class: 'btn btn-info btn-lg' %><hr>
 	   <div class="pb-5"> 
 	   		<%= f.submit "Zapisz", class: 'btn btn-success', style: "float:left" %>
