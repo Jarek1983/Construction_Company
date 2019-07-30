@@ -41,6 +41,7 @@ gem 'devise', '~> 4.6', '>= 4.6.2'
 gem 'simple_form', '~> 4.1'
 gem 'friendly_id', '~> 5.2.4'
 gem 'trix-rails', require: 'trix'
+gem "recaptcha", require: "recaptcha/rails"
 
 
 group :development, :test do
