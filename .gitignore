@@ -30,12 +30,8 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
-/config/database.yml
-/db/seeds.rb
-/config/environments/development.rb
-/config/environments/production.rb
 /config/environments/test.rb
-/config/secrets.yml
-/config/initializers/recaptcha.rb
-localhost.crt
-localhost.key
+/config/environments/production.rb
+/config/environments/development.rb
+/comfig/database.yml
+
