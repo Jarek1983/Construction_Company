@@ -40,6 +40,7 @@ gem 'bootstrap', '~> 4.3.1'
 gem 'devise', '~> 4.6', '>= 4.6.2'
 gem 'simple_form', '~> 4.1'
 gem 'friendly_id', '~> 5.2.4'
+gem 'trix-rails', require: 'trix'
 
 
 group :development, :test do

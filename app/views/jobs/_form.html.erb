@@ -3,10 +3,10 @@
 	<%= simple_form_for @job do |f| %>
 
 	    <%= f.input :name, label: 'Poszukujemy:' %>
-	    <%= f.input :description, label: 'Obowiązki:'%> 
-	    <%= f.input :specifications, label: 'Wymagania:'%>
-	    <%= f.input :offer, label: 'Oferujemy:'%>
-	    <%= f.input :information, label: 'Dodatkowe informacje:'%>
+	    <%= f.input :description, label: 'Obowiązki:', as: :trix_editor%> 
+	    <%= f.input :specifications, label: 'Wymagania:', as: :trix_editor%>
+	    <%= f.input :offer, label: 'Oferujemy:', as: :trix_editor%>
+	    <%= f.input :information, label: 'Dodatkowe informacje:', as: :trix_editor%>
 	    <%= f.hidden_field :user_id, value: 1 %>
 	    <%= link_to 'Powrót', jobs_path, class: 'btn btn-info btn-lg' %><hr>
 	   <div class="pb-5"> 
