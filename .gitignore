@@ -33,5 +33,7 @@
 /config/environments/test.rb
 /config/environments/production.rb
 /config/environments/development.rb
-/comfig/database.yml
+/config/database.yml
 
+localhost.crt
+localhost.key
