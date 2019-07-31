@@ -1,13 +1,6 @@
 Rails.application.routes.draw do
   
-  get 'executions/index'
-  get 'executions/new'
-  get 'executions/edit'
-  get 'executions/show'
-  get 'execution/index'
-  get 'execution/new'
-  get 'execution/edit'
-  get 'execution/show'
+  resources :executions
   resources :messages  
   resources :jobs
   devise_for :users
