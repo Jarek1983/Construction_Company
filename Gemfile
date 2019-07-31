@@ -42,6 +42,7 @@ gem 'simple_form', '~> 4.1'
 gem 'friendly_id', '~> 5.2.4'
 gem 'trix-rails', require: 'trix'
 gem "recaptcha", require: "recaptcha/rails"
+gem 'mini_magick', '~> 4.9', '>= 4.9.5'
 
 
 group :development, :test do
