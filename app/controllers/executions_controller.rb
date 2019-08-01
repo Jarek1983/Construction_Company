@@ -42,6 +42,13 @@ class ExecutionsController < ApplicationController
     redirect_to executions_path
   end
 
+
+  def delete_image_attachment
+    @image = ActiveStorage::Attachment.find(params[:id])
+    @image.purge
+    redirect_back(fallback_location: executions_path)
+  end
+
   private
 
   def execution_params

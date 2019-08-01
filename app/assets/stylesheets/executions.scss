@@ -5,7 +5,7 @@
 
 img {
 	transition: all 2s ease-in-out;
-	margin-left: 10vh;
+
 }
 
 img:hover {
@@ -15,55 +15,32 @@ img:hover {
 @media only screen and (max-width: 1199px),
 (min-device-width: 1025px) and (max-device-width: 1199px) {
 
-   img {
-	 transition: all 2s ease-in-out;
-	 margin-left: 4vh;
-	}
 }
 
 @media only screen and (max-width: 1024px),
 (min-device-width: 992px) and (max-device-width: 1024px) {
 
-   img {
-	 transition: all 2s ease-in-out;
-	 margin-left: 2vh;
-	 width: 60vh;
-	}
 }
 
 @media only screen and (max-width: 991px),
 (min-device-width: 801px) and (max-device-width: 991px) {
 
-   img {
-	 transition: all 2s ease-in-out;
-	 margin-left: 25vh;
-	}
 }
 
 @media only screen and (max-width: 800px),
 (min-device-width: 768px) and (max-device-width: 800px) {
 
-   img {
-	 transition: all 2s ease-in-out;
-	 margin-left: 5vh;
-	}
 }
 
 @media only screen and (max-width: 767px),
 (min-device-width: 640px) and (max-device-width: 767px) {
 
-   img {
-	 transition: all 2s ease-in-out;
-	 margin-left: 10vh;
-	}
 }
 
 @media only screen and (max-width: 639px),
 (min-device-width: 100px) and (max-device-width: 639px) {
 	
-	img {
-	  transition: all 2s ease-in-out;
-	  margin-left: 3vh;
+	img {	
 	  width: 50vh;
 	}
 }

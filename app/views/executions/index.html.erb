@@ -18,7 +18,12 @@
                                </h4>
                                <h4 class="card-title text-justify mx-2">
                                   <%=sanitize execution.description %>
-                               </h4>                          
+                               </h4>  
+
+                               <div class="p-2">
+
+                                <%= link_to 'Galeria', execution_path(execution), class: "btn btn-lg btn-primary" %>
+                               </div>                        
 
                                 <% if current_user && current_user&.admin? %>
 

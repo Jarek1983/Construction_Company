@@ -13,16 +13,27 @@
       </div>
   </div>
 
-  <div class="row center">
+  <div class="row">
+      <div class="col-12 text-center">
 
        
           <% @execution.images.each do |image| %>
- <p>
-          <%= image_tag image.variant(resize:"450x450") %></p> 
+
+            <div class="p-2">
+
+              <%= image_tag image.variant(resize:"450x450") %>
+
+            </div>
+
+            <div>
+              
+                <%= link_to 'Usuń', delete_image_attachment_execution_path(image), method: :delete, data: { confirm: 'Are you sure?' },
+                class: "btn btn-lg btn-danger"  %>
+
+            </div><hr>
 
           <% end %> 
-
-        
+        </div>
   </div>
 
   <div class="pb-5">

@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
   
-  resources :executions
+ 
+  resources :executions do
+  	member do
+    	delete :delete_image_attachment
+  	end
+  end
+  
   resources :messages  
   resources :jobs
   devise_for :users
