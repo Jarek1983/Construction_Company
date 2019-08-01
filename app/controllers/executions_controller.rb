@@ -1,6 +1,6 @@
 class ExecutionsController < ApplicationController
 
-  before_action :find_job, only: [:show, :edit, :update, :destroy]
+  before_action :find_execution, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:show, :index]
   
   def index
@@ -45,7 +45,7 @@ class ExecutionsController < ApplicationController
   private
 
   def execution_params
-    params.require(:execution).permit(:name,:description, :user_id)
+    params.require(:execution).permit(:name,:description, :user_id, images: [])
 
   end
 

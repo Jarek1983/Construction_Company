@@ -23,11 +23,11 @@
                 <div class="col-12">
                   <div class="card"> 
                           <div class="card-block text-center">
-                               <h4 class="card-title text-center text-capitalize font-weight-bold">
+                               <h4 class="card-title text-center font-weight-bold">
                                   <%=post.title %>
                                </h4>
-                               <h4 class="card-title text-justify text-capitalize mx-2">
-                                  <%=post.description %>
+                               <h4 class="card-title text-justify mx-2">
+                                  <%=sanitize post.description %>
                                </h4>
 
                                 <% if current_user && current_user&.admin? %>

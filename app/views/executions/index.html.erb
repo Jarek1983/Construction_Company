@@ -16,9 +16,9 @@
                                <h4 class="card-title text-center text-capitalize font-weight-bold">
                                   <%=execution.name %>
                                </h4>
-                               <h4 class="card-title text-justify text-capitalize mx-2">
-                                  <%=execution.description %>
-                               </h4>                              
+                               <h4 class="card-title text-justify mx-2">
+                                  <%=sanitize execution.description %>
+                               </h4>                          
 
                                 <% if current_user && current_user&.admin? %>
 
@@ -37,4 +37,5 @@
 
       </div>
   </div>
+
 </section>

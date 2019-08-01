@@ -13,20 +13,20 @@
                 <div class="col-12">
                   <div class="card"> 
                           <div class="card-block text-center">
-                               <h4 class="card-title text-center text-capitalize font-weight-bold">
+                               <h4 class="card-title text-center font-weight-bold">
                                   <%=job.name %>
                                </h4>
-                               <h4 class="card-title text-justify text-capitalize mx-2">
-                                  <%=job.description %>
+                               <h4 class="card-title text-justify mx-2">
+                                  <%=sanitize job.description %>
                                </h4>
-                               <h4 class="card-title text-justify text-capitalize mx-2">
-                                  <%=job.specifications %>
+                               <h4 class="card-title text-justify mx-2">
+                                  <%=sanitize job.specifications %>
                                </h4>
-                               <h4 class="card-title text-justify text-capitalize mx-2">
-                                  <%=job.offer %>
+                               <h4 class="card-title text-justify mx-2">
+                                  <%=sanitize job.offer %>
                                </h4>
-                               <h4 class="card-title text-justify text-capitalize mx-2">
-                                  <%=job.information %>
+                               <h4 class="card-title text-justify mx-2">
+                                  <%=sanitize job.information %>
                                </h4>                               
 
                                 <% if current_user && current_user&.admin? %>

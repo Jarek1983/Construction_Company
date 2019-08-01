@@ -3,13 +3,11 @@
       <div class="col-12">
 
   <p class="text-center">
-<!--     <strong>Tytuł:</strong> -->
     <%= @post.title %>
   </p>
 
   <p class="text-justify">
-<!--     <strong>Tekst:</strong> -->
-    <%= @post.description %>
+    <%=sanitize @post.description %>
   </p>
 
   </div>

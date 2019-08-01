@@ -2,16 +2,28 @@
   <div class="row">
       <div class="col-12">
 
-  <p class="text-center">
-    <%= @execution.name %>
-  </p>
+        <p class="text-center">
+          <%= @execution.name %>
+        </p>
 
-  <p class="text-justify">
-    <%= @execution.description %>
-  </p>
+        <p class="text-justify">
+          <%=sanitize @execution.description %>
+        </p>
 
-  </div>
       </div>
+  </div>
+
+  <div class="row center">
+
+       
+          <% @execution.images.each do |image| %>
+ <p>
+          <%= image_tag image.variant(resize:"450x450") %></p> 
+
+          <% end %> 
+
+        
+  </div>
 
   <div class="pb-5">
       <%= link_to 'Powrót', executions_path, class: 'btn btn-lg btn-success' %>

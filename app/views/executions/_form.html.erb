@@ -4,10 +4,11 @@
 
 	    <%= f.input :name, label: 'Nazwa' %>
 	    <%= f.input :description, label: 'Opis prac', as: :trix_editor%> 
-	    <%= f.hidden_field :user_id, value: 1 %>
-	    <%= link_to 'Powrót', executions_path, class: 'btn btn-info btn-lg' %><hr>
-	   <div class="pb-5"> 
-	   		<%= f.submit "Zapisz", class: 'btn btn-success', style: "float:left" %>
+	    <%= f.file_field :images, multiple: true %>
+	    <%= f.hidden_field :user_id, value: 1 %><hr>
+	    <%= link_to 'Powrót', executions_path, class: 'btn btn-info btn-lg' %>
+	   <div class="pb-5"><hr>
+	   		<%= f.submit "Zapisz", class: 'btn btn-success btn-lg', style: "float:left" %>
 	   </div>
 
 	<% end %>

@@ -7,19 +7,19 @@
   </p>
 
   <p class="text-justify">
-    <%= @job.description %>
+    <%=sanitize @job.description %>
   </p>
 
   <p class="text-justify">
-    <%= @job.specifications %>
+    <%=sanitize @job.specifications %>
   </p>
 
   <p class="text-justify">
-    <%= @job.offer %>
+    <%=sanitize @job.offer %>
   </p>
 
   <p class="text-justify">
-    <%= @job.information %>
+    <%=sanitize @job.information %>
   </p>
 
   </div>
