@@ -18,12 +18,7 @@
                                </h4>
                                <h4 class="card-title text-justify mx-2">
                                   <%=sanitize execution.description %>
-                               </h4>  
-
-                               <div class="p-2">
-
-                                <%= link_to 'Galeria', execution_path(execution), class: "btn btn-lg btn-primary" %>
-                               </div>                        
+                               </h4>                         
 
                                 <% if current_user && current_user&.admin? %>
 
@@ -32,6 +27,15 @@
                                     <%= link_to 'Edytuj', edit_execution_path(execution), class: "btn btn-lg btn-info" %>
                                     <%= link_to 'Usuń', execution_path(execution), method: :delete, data: {confirm: 'Czy na pewno usunąć?'}, class: "btn btn-lg btn-danger" %>
                                   </div>
+
+                                <% else %>
+
+                                    <div class="p-2">
+
+                                    <%= link_to 'Galeria', execution_path(execution), class: "btn btn-lg btn-primary" %>
+
+                                    </div> 
+                                    
                                 <% end %>
 
                           </div>

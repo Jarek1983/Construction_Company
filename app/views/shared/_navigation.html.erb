@@ -5,43 +5,64 @@
 
       <div class="collapse navbar-collapse" id="navbarsExample01">
         <ul class="navbar-nav mr-auto">
+
           <li class="nav-item active pl-5">
             <%= link_to 'Aktualności', posts_path, class: 'nav-link pl-5' %>
           </li>
+
           <li class="nav-item">
             <%= link_to 'O nas', about_index_path, class: 'nav-link pl-5' %>
           </li>
+
           <li class="nav-item">
             <%= link_to 'Usługi', services_index_path, class: 'nav-link pl-5' %>
           </li>
+
           <li class="nav-item">
             <%= link_to 'Realizacje', executions_path, class: 'nav-link pl-5' %>
           </li>
+
           <li class="nav-item">
             <%= link_to 'Praca', jobs_path, class: 'nav-link pl-5' %>
           </li>
-          <li class="nav-item">
-            <%= link_to 'Referencje', root_path, class: 'nav-link pl-5' %>
-          </li>
+
           <li class="nav-item">
             <%= link_to 'Facebook', root_path, class: 'nav-link pl-5' %>
           </li>
+          
           <li class="nav-item">
             <%= link_to 'Kontakt', new_message_path, class: 'nav-link pl-5' %>
           </li>
 
-
           <% if current_user && current_user.admin? %>
 
-          <li class="nav-item">
-            <%= link_to 'Wyloguj', destroy_user_session_path, method: :delete, class: 'nav-link pl-5' %>
-          </li>
+            <li class="nav-item">
+              <%= link_to 'Referencje', accept_index_admin_opinions_path, class: 'nav-link pl-5' %>
+            </li>
+
+            <li class="nav-item">
+              <%= link_to 'Wyloguj', destroy_user_session_path, method: :delete, class: 'nav-link pl-5' %>
+            </li>
             
+          <% elsif current_user %>
+
+            <li class="nav-item">
+              <%= link_to 'Referencje', opinions_path, class: 'nav-link pl-5' %>
+            </li>
+
+            <li class="nav-item">
+              <%= link_to 'Wyloguj', destroy_user_session_path, method: :delete, class: 'nav-link pl-5' %>
+            </li>
+
           <% else %>
 
-          <li class="nav-item">
-            <%= link_to 'Zaloguj', new_user_session_path, class: 'nav-link pl-5'%>
-          </li>
+            <li class="nav-item">
+              <%= link_to 'Referencje', opinions_path, class: 'nav-link pl-5' %>
+            </li>
+
+            <li class="nav-item">
+              <%= link_to 'Zaloguj', new_user_session_path, class: 'nav-link pl-5'%>
+            </li>
 
           <% end %>
 
