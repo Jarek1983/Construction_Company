@@ -3,11 +3,11 @@ class OpinionsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :new, :create]
   
   def index
-    @opinions = Opinion.permission.all.reverse
+    @opinions = Opinion.permission.all.order("created_at DESC").paginate(page: params[:page], per_page: 6) 
   end
 
   def accept_index
-    @opinions = Opinion.all.reverse
+    @opinions = Opinion.all.order("created_at DESC").paginate(page: params[:page], per_page: 6)     
     render 'accept_index'
   end
 

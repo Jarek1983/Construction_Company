@@ -2,6 +2,12 @@
 
   <div class="row">
 
+    <div class="p-2">
+
+      <%= will_paginate @opinions, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
+
+    </div>
+
       <div class="col-12">
 
             <%= link_to 'Dodaj', new_opinion_path, class: "btn btn-primary btn-lg" %> <hr/>
@@ -28,7 +34,6 @@
 
                                 <div class="p-2">
 
-                                  <%= link_to 'Pokaż', opinion_path(opinion), class: "btn btn-lg btn-primary" %>
                                   <%= link_to 'Edytuj', edit_admin_opinion_path(opinion), class: "btn btn-lg btn-info" %>
                                   <%= link_to 'Usuń', opinion_path(opinion), method: :delete, data: {confirm: 'Czy na pewno usunąć?'}, class: "btn btn-lg btn-danger" %>
 

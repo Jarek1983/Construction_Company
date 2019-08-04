@@ -3,7 +3,7 @@ class JobsController < ApplicationController
   before_action :authenticate_user!, except: [:show, :index]
   
   def index
-    @jobs = Job.all.reverse
+    @jobs = Job.all.order("created_at DESC").paginate(page: params[:page], per_page: 6)
   end
 
   def new

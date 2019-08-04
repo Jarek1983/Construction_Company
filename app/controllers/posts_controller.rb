@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:show, :index]
   
   def index
-    @posts = Post.all.reverse
+    @posts = Post.all.order("created_at DESC").paginate(page: params[:page], per_page: 6)
   end
 
   def new

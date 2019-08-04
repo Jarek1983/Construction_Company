@@ -239,3 +239,8 @@ pl:
       long: "%B %d, %Y %H:%M"
       short: "%d %b %H:%M"
     pm: po południu
+
+  will_paginate:
+      previous_label: "&#8592; Poprzedni"
+      next_label: "Następny &#8594;"
+      page_gap: "&hellip;"
