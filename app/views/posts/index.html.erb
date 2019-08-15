@@ -1,17 +1,10 @@
-<div class="jumbotron">
-  <h1 class="display-4">Hello, world!</h1>
-    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+<section class="container pt-5 pb-5">
 
-    <hr class="my-4">
+    <h1 class="display-5 text-center text-primary">Aktualności</h1>
 
-    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-</div>
-
-
-<section class="container pb-5">
   <div class="row">
 
-    <div class="p-2">
+    <div class="px-2">
 
       <%= will_paginate @posts, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
 
@@ -27,15 +20,15 @@
 
           <div class="row pb-5">
               <% @posts.each do |post| %>
-                <div class="col-12">
-                  <div class="card"> 
+                <div class="col-12 col-lg-4 p-2">
+                  <div class="card p-2"> 
                           <div class="card-block text-center">
-                               <h4 class="card-title text-center font-weight-bold">
+                               <h4 class="card-title text-center font-weight-bold pt-3">
                                   <%=post.title %>
                                </h4>
-                               <h4 class="card-title text-justify mx-2">
+                               <p class="card-title text-justify mx-2">
                                   <%=sanitize post.description %>
-                               </h4>
+                               </p>
 
                                 <% if current_user && current_user&.admin? %>
 

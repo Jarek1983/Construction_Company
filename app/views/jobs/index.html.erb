@@ -19,22 +19,22 @@
               <% @jobs.each do |job| %>
                 <div class="col-12">
                   <div class="card"> 
-                          <div class="card-block text-center">
-                               <h4 class="card-title text-center font-weight-bold">
+                          <div class="card-block">
+                               <h4 class="card-title text-center font-weight-bold pt-3">
                                   <%=job.name %>
                                </h4>
-                               <h4 class="card-title text-justify mx-2">
-                                  <%=sanitize job.description %>
-                               </h4>
-                               <h4 class="card-title text-justify mx-2">
-                                  <%=sanitize job.specifications %>
-                               </h4>
-                               <h4 class="card-title text-justify mx-2">
-                                  <%=sanitize job.offer %>
-                               </h4>
-                               <h4 class="card-title text-justify mx-2">
-                                  <%=sanitize job.information %>
-                               </h4>                               
+                               <p class="card-title text-justify mx-2">
+
+                                <p class="lead ml-3 font-italic">Obowiązki: <%=sanitize job.description %>
+                               </p>
+                               <p class="lead ml-3 font-italic">Wymagania: <%=sanitize job.specifications %>
+                               </p>
+                               <p class="lead ml-3 font-italic">
+                                Oferujemy: <%=sanitize job.offer %>
+                               </p>
+                               <p class="lead ml-3 font-italic">
+                                Dodatkowe informacje <%=sanitize job.information %>
+                               </p>                               
 
                                 <% if current_user && current_user&.admin? %>
 

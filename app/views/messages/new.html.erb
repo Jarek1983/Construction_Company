@@ -1,8 +1,22 @@
 <div class="container pt-5 pb-5 text-center">
+  
+  <div class="p-5">
+    <h1 class="display-5 text-info">Kontakt do nas</h1>
+      <p class="lead">Działamy na obszarze Rybnika, Wodzisławia Ślaskiego, Radlina, Pszowa</p>
+
+      <hr class="my-4">
+
+      <h3>Telefon: <span class="badge badge-primary"> 555-555-555</span></h3>
+      <h3>Mail: <span class="badge badge-danger">mail@wp.pl</span></h3>
+      <h3>Adres: <span class="badge badge-warning">44-200 Rybnik. ul. Jakaś 30a</span></h3>
+      <h3>Poniższy formularz</h3>
+
+  </div>
+
   <%= form_for(@message) do |f| %>
 
     <div class="row">
-      <div class="col-25">
+      <div class="col-25 font-italic font-weight-bolder">
        	<%= f.label :Imię %>      
        </div>
       <div class="col-75">
@@ -10,7 +24,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-25">
+      <div class="col-25 font-italic font-weight-bolder">
         <%= f.label :Email %>
       </div>
       <div class="col-75">
@@ -18,7 +32,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-25">
+      <div class="col-25 font-italic font-weight-bolder">
         <%= f.label :tekst %>
       </div>
       <div class="col-75 pb-2">
@@ -26,7 +40,7 @@
       </div>
     </div>
     <div class="row">
-      <%= f.submit "Wyślij", class: 'btn btn-primary new_submit2' %>
+      <%= f.submit "Wyślij", class: 'btn btn-lg btn-primary' %>
     </div>
     <% end %>
 

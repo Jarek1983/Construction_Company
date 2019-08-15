@@ -1,5 +1,7 @@
 <section class="container pt-5 pb-5">
 
+  <p>Jeśli chcesz zostawić komentarz zaloguj się poprzez rejestrację w zakładce zaloguj się/zarejestruj się</p>
+
   <div class="row">
 
     <div class="p-2">
@@ -16,24 +18,24 @@
 
               <% @opinions.each do |opinion| %>
 
-                <div class="col-12">
+                <div class="col-12 col-lg-4 p-2">
 
-                  <div class="card">
+                  <div class="card p-2">
 
                           <div class="card-block text-center pt-3">
 
-                               <h4 class="card-title text-center font-weight-bold">
+                               <h4 class="card-title text-center font-weight-bold pt-3">
                                   <%=opinion.name %>
                                </h4>
 
-                               <h4 class="card-body text-justify mx-2">
+                               <p class="card-body text-justify mx-2">
                                   <%=sanitize opinion.description %>
-                               </h4>                         
+                               </p>                         
                                     
                               <% if current_user && current_user&.admin? %>
 
                                 <div class="p-2">
-
+                                  
                                   <%= link_to 'Edytuj', edit_admin_opinion_path(opinion), class: "btn btn-lg btn-info" %>
                                   <%= link_to 'Usuń', opinion_path(opinion), method: :delete, data: {confirm: 'Czy na pewno usunąć?'}, class: "btn btn-lg btn-danger" %>
 
