@@ -11,3 +11,4 @@
 * Recaptcha for mailer
 * Mini Magic for active storage or carrievawe
 * Will Paginate
+* Better Errors
